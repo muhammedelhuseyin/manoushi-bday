@@ -50,6 +50,7 @@ body{
   border-radius: var(--radius);
   padding: 26px;
   backdrop-filter: blur(10px);
+  overflow:hidden;
 }
 
 .card-wide{width:min(720px, 100%)}
@@ -109,6 +110,7 @@ body{
   color: var(--text);
   outline:none;
   font-size:16px;
+  min-width: 0;
 }
 
 .input::placeholder{color: rgba(207,207,232,.65)}
@@ -174,6 +176,7 @@ body{
   align-items:flex-start;
   justify-content:space-between;
   gap:12px;
+  flex-wrap: wrap; /* مهم للموبايل */
 }
 
 .chip{
@@ -228,6 +231,8 @@ body{
   line-height: 1.95;
   color: #f8f2ff;
   white-space: pre-line;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .actions{
@@ -275,6 +280,8 @@ body{
   line-height: 1.9;
   color: rgba(247,247,255,.95);
   white-space: pre-line;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .footer{
@@ -292,8 +299,40 @@ body{
   pointer-events:none;
 }
 
-@media (max-width:520px){
+/* ✅ Mobile first: أقوى تحسينات */
+@media (max-width: 520px){
+  .wrap{padding:14px;}
+  .card{padding:18px; border-radius: 18px;}
+
+  .title{font-size: 28px;}
+  .subtitle{font-size: 15px;}
+
+  /* input فوق والزر تحت */
+  .row{flex-direction: column;}
+  .input{width:100%;}
+  .btn{width:100%;}
+
+  /* الأزرار تحت بعض أو 2 بالصف حسب المساحة */
+  .actions{gap:10px;}
+  .actions .btn{width:100%;}
+
+  /* العدّاد 2×2 */
   .countdown{grid-template-columns: repeat(2, 1fr);}
-  .title{font-size: 30px;}
-  .typewrap{min-height: 170px;}
+
+  /* النص أطول: خفف الحجم شوي */
+  .type{font-size: 16px; line-height: 1.9;}
+  .typewrap{min-height: 220px;}
+
+  /* زر المفاجأة الثانية يأخذ عرض كامل */
+  #secondBtn{width:100%;}
+
+  /* chip ينزل تحت بسهولة */
+  .chip{margin-top:6px;}
+}
+
+/* ✅ شاشات صغيرة جدًا */
+@media (max-width: 360px){
+  .title{font-size: 26px;}
+  .cd-num{font-size: 24px;}
+  .btn{padding: 13px 14px;}
 }
