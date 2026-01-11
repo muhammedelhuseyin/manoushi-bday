@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منوشي 💗</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+
+    <!-- LOCK SCREEN -->
+    <main id="lockScreen" class="wrap">
+      <section class="card">
+        <div class="badge">🔐 مفاجأة خاصة</div>
+        <h1 class="title">منوشي 💗</h1>
+        <p class="subtitle">في شي بسيط… بس إلك وحدك 👀</p>
+
+        <div class="hint">
+          كلمة السر هي <strong>تاريخ ميلادك</strong> (مثال: 23/1)
+        </div>
+
+        <div class="row">
+          <input
+            id="passInput"
+            class="input"
+            type="text"
+            inputmode="numeric"
+            placeholder="اكتبيها هون…"
+            autocomplete="off"
+          />
+          <button id="unlockBtn" class="btn">افتحي 🎁</button>
+        </div>
+
+        <p id="errorMsg" class="error" aria-live="polite"></p>
+
+        <div class="tiny">
+          تلميح صغير: جرّبي <span class="mono">23/1</span> أو <span class="mono">23-1</span> أو <span class="mono">2301</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- SURPRISE SCREEN -->
+    <main id="surpriseScreen" class="wrap hidden">
+      <section class="card card-wide">
+        <div class="top">
+          <h1 class="title">Happy Birthday, منوشي 💗</h1>
+          <div class="chip">🎂 23 / 1</div>
+        </div>
+
+        <p class="subtitle">
+          مو لازم تكون الهدية كبيرة… المهم تكون من القلب 🤍
+        </p>
+
+        <div class="countdown">
+          <div class="cd-box">
+            <div id="d" class="cd-num">0</div>
+            <div class="cd-label">يوم</div>
+          </div>
+          <div class="cd-box">
+            <div id="h" class="cd-num">0</div>
+            <div class="cd-label">ساعة</div>
+          </div>
+          <div class="cd-box">
+            <div id="m" class="cd-num">0</div>
+            <div class="cd-label">دقيقة</div>
+          </div>
+          <div class="cd-box">
+            <div id="s" class="cd-num">0</div>
+            <div class="cd-label">ثانية</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="typewrap">
+          <p id="typeText" class="type"></p>
+        </div>
+
+        <div class="actions">
+          <button id="confettiBtn" class="btn btn-soft">احتفال 🎉</button>
+          <button id="copyBtn" class="btn">انسخي رسالة 💌</button>
+        </div>
+
+        <p id="copyToast" class="toast"></p>
+
+        <div class="footer">
+          <span>— من شخص عم يبتسم كل ما يقرأ اسمك 🙂</span>
+        </div>
+      </section>
+
+      <canvas id="confetti" class="confetti"></canvas>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
