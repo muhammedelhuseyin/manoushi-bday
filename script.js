@@ -37,7 +37,7 @@ const message =
   "لأنك بتستاهلي 🤍\n\n" +
   "Happy Birthday, منوشي 🎂💗\n" +
   "سنينك كتار و حلوين  ✨\n\n" +
-  "— من شخص حابب يشوفك تبتسمي اليوم 🙂";
+
 
 let typeIndex = 0;
 let typeTimer = null;
@@ -272,4 +272,5 @@ function setupSecondSurprise(){
     secondBox.classList.add("hidden");
   });
 }
+
 
