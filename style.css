@@ -1,12 +1,12 @@
 :root{
-  --bg1:#0b0b14;
-  --bg2:#141428;
+   --bg1:#070b16;
+  --bg2:#0e1630;
   --card:#ffffff0f;
   --card2:#ffffff14;
-  --text:#f7f7ff;
-  --muted:#cfcfe8;
-  --accent:#ff77c8;
-  --accent2:#7c7bff;
+  --text:#f4f7ff;
+  --muted:#c8d6ff;
+  --accent:#5da9ff;   /* الأزرق الرئيسي */
+  --accent2:#7b9cff; 
   --shadow: 0 20px 60px rgba(0,0,0,.45);
   --radius: 22px;
 }
@@ -336,3 +336,4 @@ body{
   .cd-num{font-size: 24px;}
   .btn{padding: 13px 14px;}
 }
+
